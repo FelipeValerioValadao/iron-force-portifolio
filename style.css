@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+
+/* MENU */
+
+header {
+    background-color: #111;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: red;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* CAPA */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 8%;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+
+    background-color: red;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+
+/* SEÇÕES */
+
+section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    background-color: #151515;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+.card {
+    background-color: #181818;
+
+    padding: 35px;
+
+    width: 300px;
+
+    min-height: 220px;
+
+    border-radius: 12px;
+
+    border: 1px solid #292929;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: red;
+
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #cccccc;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.planos {
+    grid-template-columns: repeat(3, 1fr);
+}
+/* CONTATO */
+
+.contato {
+    background-color: #151515;
+}
+
+.contato p {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 30px;
+
+    background-color: #080808;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+.cards {
+    grid-template-columns: 1fr;
+}
+
+#modalidades .cards {
+    grid-template-columns: 1fr;
+}
+
+.planos {
+    grid-template-columns: 1fr;
+}
+
+.galeria-grid {
+    grid-template-columns: 1fr;
+}
+}
+
+/* PLANO EM DESTAQUE */
+
+.plano-destaque {
+    border: 2px solid red;
+    transform: scale(1.05);
+    position: relative;
+}
+
+.plano-destaque:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+.mais-popular {
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background-color: red;
+
+    color: white;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+/* MODALIDADES */
+
+#modalidades .cards {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* GALERIA */
+
+.galeria {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.foto {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto img {
+    transition: transform 0.4s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+}
